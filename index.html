@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b58">
+<meta name="description" content="ZAKOM ETIKA ELECTRONICS — phone accessories and electronics. Technology You Can Trust.">
+<title>ZAKOM ETIKA ELECTRONICS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Zakom Etika home">
+    <img src="assets/zakom-etika-logo.jpg" alt="ZAKOM ETIKA logo">
+    <span><strong>ZAKOM ETIKA</strong><small>ELECTRONICS</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="nav">
+    <a href="#shop">Shop</a><a href="#how">How to order</a><a href="#contact">Contact</a>
+    <button class="cart-button" id="openCart">Cart <span id="cartCount">0</span></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">WELCOME TO ZAKOM ETIKA</p>
+    <h1>Technology<br><span>You Can Trust.</span></h1>
+    <p>Shop everyday electronics and phone accessories with convenient ordering and friendly service.</p>
+    <a class="primary-button" href="#shop">Explore products</a>
+    <p class="small-note">New business launch • Kenya</p>
+  </div>
+  <div class="hero-art" aria-label="Electronics shopping illustration">
+    <div class="device phone"><div class="speaker"></div><div class="screen"><span>ZE</span><small>SMART CHOICE</small></div></div>
+    <div class="device earbuds"><div class="bud b1"></div><div class="bud b2"></div><div class="case"></div></div>
+    <div class="device watch"><div class="watch-face">10:08</div></div>
+    <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+  </div>
+</section>
+
+<section class="trust-row">
+  <div><b>✓</b><span>Convenient ordering</span></div>
+  <div><b>✓</b><span>Clear product prices</span></div>
+  <div><b>✓</b><span>Payment verified before dispatch</span></div>
+</section>
+
+<section class="shop-section" id="shop">
+  <div class="section-heading">
+    <div><p class="eyebrow">OUR CATALOGUE</p><h2>Shop electronics</h2><p>Sample products are shown below. Update prices and availability before selling.</p></div>
+    <input id="searchInput" type="search" placeholder="Search products…" aria-label="Search products">
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="All">All products</button>
+    <button class="filter" data-category="Charging">Charging</button>
+    <button class="filter" data-category="Audio">Audio</button>
+    <button class="filter" data-category="Phone accessories">Phone accessories</button>
+    <button class="filter" data-category="Smart devices">Smart devices</button>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="how-section" id="how">
+  <p class="eyebrow">SIMPLE & CONVENIENT</p><h2>How to order</h2>
+  <div class="steps">
+    <article><span>01</span><h3>Choose products</h3><p>Add the items you want to your cart.</p></article>
+    <article><span>02</span><h3>Send your order</h3><p>Continue to WhatsApp and confirm delivery or collection details.</p></article>
+    <article><span>03</span><h3>Pay securely</h3><p>Use the M-Pesa details confirmed by the seller. The seller must verify payment before dispatch.</p></article>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div><p class="eyebrow">LET'S TALK</p><h2>Need help choosing?</h2><p>Message ZAKOM ETIKA ELECTRONICS to ask about availability, delivery, or a product.</p></div>
+  <a class="primary-button" id="contactWhatsApp" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</section>
+</main>
+
+<footer><div class="footer-brand">ZAKOM ETIKA <span>ELECTRONICS</span></div><p>Technology You Can Trust.</p><small>© <span id="year"></span> ZAKOM ETIKA ELECTRONICS. Product prices and availability must be confirmed.</small></footer>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" aria-label="Close cart">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom"><div class="total-line"><span>Estimated total</span><strong id="cartTotal">KSh 0</strong></div>
+    <label for="customerName">Your name</label><input id="customerName" placeholder="Name">
+    <label for="customerLocation">Delivery area / collection</label><input id="customerLocation" placeholder="e.g. Nakuru town">
+    <label for="customerNote">Extra details (optional)</label><textarea id="customerNote" rows="2" placeholder="Preferred colour, delivery questions…"></textarea>
+    <button class="primary-button full" id="checkoutButton">Order via WhatsApp</button>
+    <p class="tiny">This sends an order message. It does not process a payment.</p>
+  </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

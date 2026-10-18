@@ -1,6 +1,6 @@
 // ZAKOM ETIKA ELECTRONICS starter storefront.
 // Edit WHATSAPP_NUMBER and product prices below before publishing.
-const WHATSAPP_NUMBER = "254700000000"; // Replace with your WhatsApp number, country code included, no + sign.
+const WHATSAPP_NUMBER = "254741223613"; // Replace with your WhatsApp number, country code included, no + sign.
 const CURRENCY = "KSh";
 const products = [
  {id:1,name:"USB-C Fast Charger",category:"Charging",price:650,icon:"🔌",desc:"Everyday charging adapter. Confirm wattage and compatibility."},

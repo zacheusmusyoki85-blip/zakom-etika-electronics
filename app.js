@@ -49,7 +49,7 @@ document.getElementById("contactWhatsApp").addEventListener("click", e => {
     window.location.href = whatsappLink(
         "Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products."
     );
-});("click",e=>{if(WHATSAPP_NUMBER==="254741223613"){e.preventDefault();alert("Set your WhatsApp number in app.js before publishing.");}else e.currentTarget.href=whatsappLink("Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products.");});
+});
 document.getElementById("openCart").addEventListener("click",openCart);document.getElementById("closeCart").addEventListener("click",closeCart);document.getElementById("drawerBackdrop").addEventListener("click",closeCart);
 document.getElementById("searchInput").addEventListener("input",renderProducts);
 document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");selectedCategory=btn.dataset.category;renderProducts();}));

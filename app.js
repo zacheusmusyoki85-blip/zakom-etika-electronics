@@ -42,7 +42,7 @@ document.getElementById("checkoutButton").addEventListener("click",()=>{
  const lines=cart.map(x=>{const p=products.find(y=>y.id===x.id);return `• ${p.name} x${x.qty} — ${money(p.price*x.qty)}`;}).join("\n");
  const total=cart.reduce((s,x)=>s+x.qty*products.find(p=>p.id===x.id).price,0);
  const message=`Hello ZAKOM ETIKA ELECTRONICS, I would like to place an order:\n\n${lines}\n\nEstimated total: ${money(total)}\nName: ${name}\nDelivery/collection: ${location}\nExtra details: ${note}\n\nPlease confirm availability, final price, delivery fee, and official payment instructions.`;
- if(WHATSAPP_NUMBER==="254700000000"){alert("Before taking orders, open app.js and replace the demo WhatsApp number 254700000000 with your own WhatsApp number.");return;}
+ if(WHATSAPP_NUMBER==="254741223613"){alert("Before taking orders, open app.js and replace the demo WhatsApp number 254741223613 with your own WhatsApp number.");return;}
  window.open(whatsappLink(message),"_blank","noopener");
 });
 document.getElementById("contactWhatsApp").addEventListener("click",e=>{if(WHATSAPP_NUMBER==="254700000000"){e.preventDefault();alert("Set your WhatsApp number in app.js before publishing.");}else e.currentTarget.href=whatsappLink("Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products.");});

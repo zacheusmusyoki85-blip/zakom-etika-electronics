@@ -33,7 +33,7 @@ function renderCart(){
 }
 function openCart(){document.getElementById("cartDrawer").classList.add("open");document.getElementById("drawerBackdrop").classList.add("show");document.getElementById("cartDrawer").setAttribute("aria-hidden","false");}
 function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.getElementById("drawerBackdrop").classList.remove("show");document.getElementById("cartDrawer").setAttribute("aria-hidden","true");}
-function whatsappLink(message){return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;}
+function whatsappLink(message){return `https://wa.me/${254741223613}?text=${encodeURIComponent(message)}`;}
 document.getElementById("checkoutButton").addEventListener("click",()=>{
  if(!cart.length){alert("Your cart is empty. Add a product first.");return;}
  const name=document.getElementById("customerName").value.trim()||"Not provided";

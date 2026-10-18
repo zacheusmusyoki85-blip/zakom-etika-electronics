@@ -33,7 +33,7 @@ function renderCart(){
 }
 function openCart(){document.getElementById("cartDrawer").classList.add("open");document.getElementById("drawerBackdrop").classList.add("show");document.getElementById("cartDrawer").setAttribute("aria-hidden","false");}
 function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.getElementById("drawerBackdrop").classList.remove("show");document.getElementById("cartDrawer").setAttribute("aria-hidden","true");}
-function whatsappLink(message){return `https://wa.me/${254741223613}?text=${encodeURIComponent(message)}`;}
+function whatsappLink(message){return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;}
 document.getElementById("checkoutButton").addEventListener("click",()=>{
  if(!cart.length){alert("Your cart is empty. Add a product first.");return;}
  const name=document.getElementById("customerName").value.trim()||"Not provided";
@@ -42,10 +42,14 @@ document.getElementById("checkoutButton").addEventListener("click",()=>{
  const lines=cart.map(x=>{const p=products.find(y=>y.id===x.id);return `• ${p.name} x${x.qty} — ${money(p.price*x.qty)}`;}).join("\n");
  const total=cart.reduce((s,x)=>s+x.qty*products.find(p=>p.id===x.id).price,0);
  const message=`Hello ZAKOM ETIKA ELECTRONICS, I would like to place an order:\n\n${lines}\n\nEstimated total: ${money(total)}\nName: ${name}\nDelivery/collection: ${location}\nExtra details: ${note}\n\nPlease confirm availability, final price, delivery fee, and official payment instructions.`;
- if(WHATSAPP_NUMBER==="254741223613"){alert("Before taking orders, open app.js and replace the demo WhatsApp number 254741223613 with your own WhatsApp number.");return;}
- window.open(whatsappLink(message),"_blank","noopener");
+ window.location.href = whatsappLink(message);
 });
-document.getElementById("contactWhatsApp").addEventListener("click",e=>{if(WHATSAPP_NUMBER==="254741223613"){e.preventDefault();alert("Set your WhatsApp number in app.js before publishing.");}else e.currentTarget.href=whatsappLink("Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products.");});
+document.getElementById("contactWhatsApp").addEventListener("click", e => {
+    e.preventDefault();
+    window.location.href = whatsappLink(
+        "Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products."
+    );
+});("click",e=>{if(WHATSAPP_NUMBER==="254741223613"){e.preventDefault();alert("Set your WhatsApp number in app.js before publishing.");}else e.currentTarget.href=whatsappLink("Hello ZAKOM ETIKA ELECTRONICS. I would like to ask about your products.");});
 document.getElementById("openCart").addEventListener("click",openCart);document.getElementById("closeCart").addEventListener("click",closeCart);document.getElementById("drawerBackdrop").addEventListener("click",closeCart);
 document.getElementById("searchInput").addEventListener("input",renderProducts);
 document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");selectedCategory=btn.dataset.category;renderProducts();}));
